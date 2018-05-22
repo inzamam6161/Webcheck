@@ -1,0 +1,12 @@
+
+
+<div class="form-container">
+  <img src="/assets/images/icons8-lock-50.png" id="lock">
+  <span class="error" *ngIf="error">{{error}}</span>
+  <button (click)="loginFb()" id="fb">Login with Facebook</button>
+  <button *ngIf="!authenticated" (click)="login()" id="google">Login with google</button>
+  <button *ngIf="authenticated" (click)="logout()">Logout</button>
+  <button routerLink="/login-email" id="email">Email</button>
+  <a routerLink="/signup" routerlinkActive="Active" class="alc">No account?<strong>Create one here</strong></a>
+</div>
+<router-outlet></router-outlet>
